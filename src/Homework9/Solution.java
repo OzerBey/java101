@@ -2,18 +2,10 @@ package Homework9;
 
 import java.util.Scanner;
 
-/*
- * Ödev
-Eğer kullanıcı adı yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun, 
-eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği
-ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip , 
-şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz." sorun yoksa "Şifre
-oluşturuldu" yazan programı yazınız.*/
 public class Solution {
 
 	static String userName = "Yasin";
 	static String password = "12345";
-	static String newPassword = "";
 
 	public static void main(String[] args) {
 
@@ -32,7 +24,7 @@ public class Solution {
 			switch (choise) {
 			case 'y':
 				System.out.println("Please enter your new password");
-				newPassword = scan.nextLine();
+				String newPassword = scan.nextLine();
 				if (newPassword == password || newPassword == enPassword) {
 					System.err.println(
 							"Your new password can't be the same as your old password :), please try another password\n Enter your new password");
