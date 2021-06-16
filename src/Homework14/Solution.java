@@ -49,6 +49,7 @@ public class Solution {
 			}
 		} else {
 			System.err.println("You entered Wrong Data!");
+			showAlertMessage();
 		}
 		return result;
 	}
