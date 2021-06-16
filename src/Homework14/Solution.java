@@ -40,7 +40,7 @@ public class Solution {
 				} else if (age > 65) {
 					result = (float) (calculateFee(km) - (calculateFee(km) * .5));// 30%+20% discount for age>65
 				} else {
-					result = calculateFee(km);
+					result = (float) (calculateFee(km) - calculateFee(km) * .2);
 				}
 				break;
 			default:
