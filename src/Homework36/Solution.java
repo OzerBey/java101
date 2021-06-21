@@ -12,15 +12,16 @@ public class Solution {
 
 	// it doesn't working true correctly :(
 	static int myRecursiveMethod(int number) {
+
 		int result;
-		if (number <= 0) {
+		if (number > 0) {
+			number -= 5;
+			System.out.println(number);
+			return myRecursiveMethod(number);
+		} else if (number < 0) {
 			result = myRecursiveMethod(number + 5);
 			System.out.println(result);
-			return result;
-		} else {
-			result = myRecursiveMethod(number - 5);
-			System.out.println(result);
-			return result;
 		}
+		return number;
 	}
 }
